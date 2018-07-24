@@ -20,7 +20,7 @@ if __name__ == '__main__':
     sc = SparkContext(conf=conf)
     sqlContext = SQLContext(sc)
     input_path=args.path         #'hdfs://nameservice1/user/hiddenstrawberry/test.json'
-    df=sqlContext.read.json(input_path)
+    df=sqlContext.read.json(input_path) #read json file
     columns=df.columns #columns list
     counts=df.count()
     dct={'count':{},'percent':{}}
